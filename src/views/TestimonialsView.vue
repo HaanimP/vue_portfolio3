@@ -1,134 +1,127 @@
 <template>
-    <div class="main2">
-      <div v-for=" testimonials in $store.state.testimonial" :key="testimonials.id" class="testimonial-card animate__animated animate__zoomInUp">
-        <div class="testimonial-content">
-          <img :src="testimonials.image" class="testimonial-image" alt="Testimonial Image">
-          <div class="testimonial-details">
-            <h2 class="testimonial-name">{{ testimonials.name }}</h2>
-            <p class="testimonial-text">{{ testimonials.testimonial }}</p>
+  <div class="team-boxed">
+    <div class="container">
+      <div class="intro">
+        <h2 class="text-center">Testimonials</h2>
+      </div>
+      <div class="row people">
+        <div v-for="testimonial in $store.state.testimonial" :key="testimonial.id" class="col-md-6 col-lg-4 item">
+          <div class="box">
+            <img class="rounded-circle testimonial-image" :src="testimonial.image">
+            <hr class="my-4">
+            <h3 class="name">{{ testimonial.name }}</h3>
+            <p class="title">{{ testimonial.title }}</p>
+            <hr class="my-4">
+            <p class="description">{{ testimonial.testimonial }}</p>
           </div>
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  import 'animate.css';
-  
-  export default {
-    // data() {
-    //   return {
-    //     testimonialData: testimonialData,
-    //   };
-    // },
-    computed:{
-        fetchTestimonial(){
-            this.$store.dispatch('fetchTestimonial')
-        }
-    },
-    mounted(){
-        this.fetchTestimonial
-    }
-  };
-  </script>
-  
-  <style scoped>
-  .main2 {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  </div>
+</template>
+
+<script>
+import 'animate.css';
+
+export default {
+  // data() {
+  //   return {
+  //     testimonialData: testimonialData,
+  //   };
+  // },
+  computed:{
+      fetchTestimonial(){
+          this.$store.dispatch('fetchTestimonial')
+      }
+  },
+  mounted(){
+      this.fetchTestimonial
+  }
+};
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+.team-boxed {
+  color: #313437;
+  background-image: url("https://i.ibb.co/t2z7CWk/testi.jpg" );
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  height: 260vh;
+  font-family: 'Merriweather', serif;
+  /* padding: 20px 20px; */
 }
 
-.testimonial-card {
-  border: 1px solid #D2B48C;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 16px;
-  width: 300px;
-  transition: transform 0.3s;
+.team-boxed h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: #fff;
 }
 
-.testimonial-card:hover {
-  transform: scale(1.05);
+.team-boxed .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.testimonial-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
-}
+/* .team-boxed .people {
+  padding: 50px 0;
+} */
 
-.testimonial-image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 16px;
-}
-
-.testimonial-details {
+.team-boxed .item {
   text-align: center;
 }
 
-.testimonial-name {
-  color: #FAFBFA;
-  font-size: 1.5em;
-  margin-bottom: 8px;
+.team-boxed .item .box {
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
 }
 
-.testimonial-text {
-  color: #D2B48C;
+.team-boxed .item .name {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #333;
 }
 
-@media (max-width: 1200px) {
-  .testimonial-card {
-    width: calc(33.33% - 32px);
-  }
+.team-boxed .item .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #888;
+  font-size: 12px;
 }
 
-@media (max-width: 768px) {
-  .testimonial-card {
-    width: calc(50% - 32px);
-  }
+.team-boxed .item .description {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #666;
 }
 
-@media (max-width: 480px) {
-  .testimonial-card {
-    width: 100%;
-  }
-}
-
-.testimonial-card:hover {
-  transform: scale(1.05);
-}
-
-.testimonial-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
-}
-
-.testimonial-image {
-  width: 150px;
-  height: 150px;
+.team-boxed .item img.testimonial-image {
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 16px;
 }
 
-.testimonial-details {
-  text-align: center;
+.team-boxed .social {
+  margin-top: 15px;
 }
 
-.testimonial-name {
-  color: #FAFBFA;
-  font-size: 1.5em;
-  margin-bottom: 8px;
+.team-boxed .social .social-link {
+  color: #888;
+  margin: 0 5px;
 }
 
-.testimonial-text {
-  color: #D2B48C;
+.team-boxed .social .social-link:hover {
+  color: #555;
 }
 </style>
