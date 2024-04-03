@@ -1,10 +1,53 @@
+<!-- App.vue -->
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <navbar-component />
+    
+    <spinner-component v-if="loading" />
+    <router-view v-if="!loading" />
+    
+    <footer-component />
+  </div>
 </template>
+
+<script>
+import NavbarComponent from "./components/NavbarComponent.vue";
+import FooterComponent from "./components/FooterComponent.vue";
+import HomeView from "./views/HomeView.vue";
+import ProjectsView from "./views/ProjectsView.vue";
+import SpinnerComponent from "./components/SpinnerComponent.vue";
+
+export default {
+  name: 'App',
+  components: {
+    NavbarComponent,
+    FooterComponent,
+    HomeView,
+    ProjectsView,
+    SpinnerComponent,
+  },
+  data() {
+    return {
+      loading: false,
+    };
+  },
+  methods: {
+    // Example method to simulate data loading (replace with actual data loading logic)
+    loadData() {
+      this.loading = true;
+      // Simulate a delay (replace with actual data fetching)
+      setTimeout(() => {
+        this.loading = false;
+      }, 2000);
+    },
+  },
+  created() {
+    // Call the loadData method when the component is created
+    this.loadData();
+  },
+};
+</script>
 
 <style>
 #app {
@@ -12,19 +55,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background: #664229;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
