@@ -1,159 +1,211 @@
 <template>
-    <div>
-      <h2 class="edu">Education</h2>
-      <div id="carouselExampleCaptions" class="carousel slide">
-        <!-- Use v-for to iterate through education data -->
-        <div v-for="(item, index) in $store.state.Resume" :key="index" class="carousel-item" :class="{ 'active': index === 0 }">
-          <img :src="item.imageSrc" class="d-block w-100 img-fluid rounded" :alt="item.school" />
-          <div class="carousel-caption text-dark">
-            <h5>{{ item.school }}</h5>
-            <h7>{{ item.year }}</h7>
-            <p>{{ item.description }}</p>
+    <div class="body">
+      <h1 class="edu">Education</h1>
+      <div class="container">
+        <div v-for="(item, index) in $store.state.Resume" :key="index" class="card booking-card v-2 mt-2 mb-4 rounded-bottom">
+          <div class="bg-image hover-overlay ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
+            <img :src="item.imageSrc" class="img-fluid">
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title font-weight-bold"><a>{{ item.school }}</a></h4>
+            <ul class="list-unstyled list-inline mb-2">
+              <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"> </i></li>
+              <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+              <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+              <li class="list-inline-item me-0"><i class="fa fa-star fa-xs"></i></li>
+              <li class="list-inline-item"><i class="fa fa-star-half-alt fa-xs"></i></li>
+            </ul>
+            <hr class="my-4">
+            <p class="card-text">{{ item.year }}</p>
+            <p class="card-text">{{ item.degree }}</p>
+            <hr class="my-4">
+            <p class="card-text">{{ item.description }}</p>
           </div>
         </div>
-        <!-- Carousel controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <br>
-  
-      <div class="skills-section animate__animated animate__slideInUp">
-        <h2 class="skills">Skills</h2>
-        <!-- Use v-for to iterate through skills data -->
-        <div v-for="(skill, index) in $store.state.Skills" :key="index" class="skill-item">
-          <h4 class="html">{{ skill.name }}</h4>
-          <div class="progress" role="progressbar" :aria-valuenow="skill.percentage" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar" :style="{ 'width': skill.percentage + '%' }">{{ skill.percentage }}%</div>
+      </div><br>
+
+      <h1 class="work">Work Experience</h1>
+    <div class="container" style="margin-top: 50px;">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-sl">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://i.ibb.co/kqH69xm/port-lc.jpg" class="card-img-top" alt="lifechoices">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Life Choices Studio</h5>
+                  <hr class="my-4">
+                  <p class="card-text">Building upon my foundational expertise acquired during my time at the academy, I am currently engaged in an enriching internship where I am further honing my skills in Software Engineering. This hands-on experience post-graduation from the coding course not only allows me to apply my existing knowledge but also exposes me to new challenges and technologies, contributing significantly to my professional growth and development.</p>
+                  <hr class="my-4">
+                  <p class="card-text">April 2024 - Present</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <p>{{ skill.description }}</p>
         </div>
-        <br>
       </div>
-  
+    </div>
+
+      <h1 class="skills">Skills</h1>
+      <h3 class="t-skills">Technical Skills</h3>
+      <div class="icons">
+        <p><i class="fa-brands fa-html5"></i><br>HTML</p>
+        <p><i class="fa-brands fa-css3-alt"></i><br>CSS</p>
+        <p><i class="fa-brands fa-js"></i><br>JavaScript</p>
+        <p><i class="fa-brands fa-node"></i><br>Node JS</p>
+        <p><i class="fa-solid fa-database"></i><br>MySql</p>
+        <p><i class="fa-brands fa-vuejs"></i><br>Vue JS</p>
+        <p><i class="fa-brands fa-github"></i><br>Github</p>
+        <p><i class="fa-brands fa-figma"></i><br>Figma</p>
+      </div><br>
+      <h3 class="t-skills">Soft Skills</h3>
+      <div class="icons">
+        <p><i class="fa-solid fa-tty"></i><br>Communication Skills</p>
+        <p><i class="fa-regular fa-face-smile"></i><br>Emotional Intelligence</p>
+        <p><i class="fa-solid fa-calculator"></i><br>Problem Solving Skills</p>
+        <p><i class="fa-solid fa-user-plus"></i><br>Teamwork and Collaboration</p>
+        <p><i class="fa-solid fa-business-time"></i><br>Time Management</p>
+        <p><i class="fa-solid fa-people-group"></i><br>Leadership Skills</p>
+      </div><br>
+
       <div class="cvbtn animate__animated animate__slideInUp">
-        <a href="https://pdf.ac/1UuS9D" download class="btn">Download CV </a>
+        <a href="https://pdf.ac/1UuS9D" download class="btn" target="_blank">View My CV </a>
       </div>
     </div>
   </template>
-  
+    
   <script>
-import 'animate.css';
-export default {
- computed:{
-    fetchResume(){
-            this.$store.dispatch('fetchResume')
-        },
-        fetchSkills(){
-            this.$store.dispatch('fetchSkills')
-        }
- },
- mounted() {
-        this.fetchResume
-        this.fetchSkills
+  import 'animate.css';
+  export default {
+    computed:{
+      fetchResume(){
+        this.$store.dispatch('fetchResume')
       },
-};
-</script>
-
+      fetchSkills(){
+        this.$store.dispatch('fetchSkills')
+      }
+    },
+    mounted() {
+      this.fetchResume
+      this.fetchSkills
+    },
+  };
+  </script>
   
   <style scoped>
-#carouselExampleCaptions {
-  width: 500px;
-  height: 500px;
-  margin: auto;
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+  
+  .body{
+    /* background: linear-gradient(to top, #E6B980 0%, #EACDA3 100%); */
+    background-image: url("https://i.ibb.co/cwLK998/res.jpg");
+    font-family: 'Merriweather', serif;
+  }
+  
+  .edu {
+    color: #000;
+    font-weight: 600;
+    padding: 2rem;
+  }
+
+  .work {
+    color: #000;
+    font-weight: 600;
+  }
+
+  .skills {
+    color: #000;
+    font-weight: 600;
+  }
+
+  .t-skills {
+    color: #000;
+    font-weight: 600;
+    padding: 1rem;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    padding: 1rem;
+  }
+  
+  .card.booking-card.v-2 {
+    background: transparent;
+    backdrop-filter: blur(4px);
+    width: 900px;
+  }
+  
+  .card.booking-card.v-2 .fa {
+    color: #f7aa00;
+  }
+  
+  .card.booking-card.v-2 .card-body .card-text {
+    color: #000;
+  }
+  
+  .card.card.booking-card.v-2 .chip {
+    background-color: #87e5da;
+  }
+  
+  .card.booking-card.v-2 .card-body hr {
+    border-top: 1px solid #f7aa00;
+  }
+  
+  .booking-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .booking-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .booking-card .card-body {
+    padding: 1.25rem;
+  }
+
+  .icons {
+  display: grid; /* Use grid layout for better alignment */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column width */
+  gap: 20px;
+  justify-content: center; 
 }
 
-.edu {
-    color: #D2B48C;
-    font-weight: 800;
+.icons p {
+  text-align: center; 
+  margin: 0;
+  color: #000; 
 }
 
-.skills {
-    color: #D2B48C;
-    font-weight: 800;
+.icons i {
+  font-size: 5rem; 
+  color: #987554; 
+  margin-bottom: 0.5rem; 
 }
+  
+  .img-fluid {
+    padding: 1rem;
+    width: 150px;
+    height: 150px;
+  }
 
-.carousel-inner {
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.carousel-item img {
-  object-fit: cover;
-  width: 500px;
-  height: 500px;
-}
-
-.carousel-caption {
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 5px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: transparent;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1);
-}
-
-.text-dark {
-  color: #000 !important;
-}
-
-.bg-light {
-  background-color: #f8f9fa !important;
-}
-
-.skills-section {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.skill-item {
-    margin-bottom: 30px;
-}
-
-.skill-item p {
-    color: #EEECDA;
-}
-
-.progress {
-    height: 20px;
-    margin: 0 20px 10px 20px; /* Added margin on both left and right sides */
-}
-
-.custom-progress-bar {
-  color: black;
-  font-weight: 500;
-}
-
-.progress-bar {
-    background-color: #4CAF50; /* Green color */
-    text-align: center;
-    line-height: 20px; /* Center the text vertically */
-    color: white; /* White text color */
-    border-radius: 5px; /* Rounded corners */
-}
-
-.skill-description {
-    margin: 0 20px; /* Added margin on both left and right sides */
-}
-
-.html {
-    font-weight: 700;
-    color:#FAFBFA;
-}
-
-.btn {
+  .card-title {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    color: #6c757d;
+  }
+  
+  .btn {
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
@@ -164,19 +216,90 @@ export default {
     cursor: pointer;
     margin-bottom: 10%;
   }
-
-@media (max-width: 768px) {
-  .carousel-item img {
-    max-height: 900px; 
+  
+  .card-sl {
+    background: transparent;
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 1200px;
+    height: 320px;
+    transition: transform 0.3s;
   }
+
+  .card-sl:hover {
+    transform: scale(1.05);
+  }
+
+.card-img-top {
+  border-radius: 8px 0 0 8px;
+  height: 320px;
 }
 
-@media (max-width: 576px) {
-  .carousel-item img {
-    width: 100px;
-    height: 500px; 
-  }
+.card-body {
+  padding: 1.25rem;
 }
 
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 
-</style>
+.card-text {
+  color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+        .container {
+          flex-direction: column; /* Change to column layout for smaller screens */
+        }
+
+        .card.booking-card.v-2 {
+          width: 100%; /* Make the cards full width on smaller screens */
+        }
+
+        .icons {
+          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust icon grid columns */
+        }
+
+        .card-sl {
+          width: 100%; /* Make the work experience card full width on smaller screens */
+        }
+
+        .card-img-top {
+          border-radius: 8px; /* Adjust border radius for smaller screens */
+          height: auto; /* Adjust image height for smaller screens */
+        }
+
+        .skills {
+          margin-top: 550px; /* Add margin to separate skills section from work experience card */
+        }
+
+        .icons {
+      gap: 10px; /* Adjust the gap value as needed */
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+      }
+
+      @media only screen and (max-width: 992px) {
+    /* Your existing media query styles */
+
+    .card-sl {
+      width: 700px; /* Make the work experience card full width on smaller screens */
+      height: 400px;
+    }
+
+    .card-img-top {
+      border-radius: 8px; /* Adjust border radius for smaller screens */
+      width:235px;
+      height: 400px; /* Adjust image height for smaller screens */
+    }
+
+    .icons {
+      gap: 10px; /* Adjust the gap value as needed */
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+  }
+  </style>
