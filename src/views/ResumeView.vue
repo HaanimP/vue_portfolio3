@@ -250,37 +250,40 @@
 }
 
 @media only screen and (max-width: 600px) {
-        .container {
-          flex-direction: column; /* Change to column layout for smaller screens */
-        }
+    .container {
+      flex-direction: column; /* Change to column layout for smaller screens */
+    }
 
-        .card.booking-card.v-2 {
-          width: 100%; /* Make the cards full width on smaller screens */
-        }
+    .card.booking-card.v-2 {
+      width: 100%; /* Make the cards full width on smaller screens */
+    }
 
-        .icons {
-          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust icon grid columns */
-        }
+    .icons {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust icon grid columns */
+    }
 
-        .card-sl {
-          width: 100%; /* Make the work experience card full width on smaller screens */
-        }
+    .card-sl {
+      width: 100% !important; /* Make the work experience card full width on smaller screens */
+      height: auto !important; /* Adjust height to fit content */
+    }
 
-        .card-img-top {
-          border-radius: 8px; /* Adjust border radius for smaller screens */
-          height: auto; /* Adjust image height for smaller screens */
-        }
+    .card-img-top {
+      border-radius: 8px; /* Adjust border radius for smaller screens */
+      width: 100% !important; /* Make image full width */
+      height: auto !important; /* Adjust height to fit content */
+    }
 
-        .skills {
-          margin-top: 550px; /* Add margin to separate skills section from work experience card */
-        }
+    .skills {
+      margin-top: 50px; /* Add margin to separate skills section from work experience card */
+    }
 
-        .icons {
+    .icons {
       gap: 10px; /* Adjust the gap value as needed */
       margin-left: 6px;
       margin-right: 6px;
     }
-      }
+  }
+
 
       @media only screen and (max-width: 992px) {
     /* Your existing media query styles */
