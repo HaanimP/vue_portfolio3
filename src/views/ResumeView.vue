@@ -38,7 +38,8 @@
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Life Choices Studio</h5>
+                  <h5 class="card-title">Life Choices Studio</h5><br>
+                  <h7 class="card-title">INTERN</h7>
                   <hr class="my-4">
                   <p class="card-text">Building upon my foundational expertise acquired during my time at the academy, I am currently engaged in an enriching internship where I am further honing my skills in Software Engineering. This hands-on experience post-graduation from the coding course not only allows me to apply my existing knowledge but also exposes me to new challenges and technologies, contributing significantly to my professional growth and development.</p>
                   <hr class="my-4">
@@ -223,7 +224,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 1200px;
-    height: 320px;
+    height: 360px;
     transition: transform 0.3s;
   }
 
@@ -233,7 +234,7 @@
 
 .card-img-top {
   border-radius: 8px 0 0 8px;
-  height: 320px;
+  height: 360px;
 }
 
 .card-body {
