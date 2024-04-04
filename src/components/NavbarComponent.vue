@@ -22,7 +22,7 @@
               <router-link to="/projects" class="nav-link" style="color: #D2B48C; font-weight: bold;">Projects</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/resume" class="nav-link" style="color: #D2B48C; font-weight: bold;">Resume</router-link>
+              <router-link to="/resume" class="nav-link" style="color: #D2B48C; font-weight: bold;">Education & Experience</router-link>
             </li>
             <li class="nav-item">
               <router-link to="/testimonials" class="nav-link" style="color: #D2B48C; font-weight: bold;">Testimonials</router-link>
@@ -49,6 +49,10 @@
 
   .nav-link:hover {
       color: #8B4513 !important;
+    }
+
+    .collapse{
+      font-family: 'Merriweather', serif;
     }
   
   @media (max-width: 768px) {
