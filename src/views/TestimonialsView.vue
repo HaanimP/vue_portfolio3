@@ -1,11 +1,11 @@
 <template>
   <div class="team-boxed">
     <div class="container">
-      <div class="intro">
-        <h2 class="text-center">Testimonials</h2>
+      <div class="intro text-center"> <!-- Updated here -->
+        <h2>Testimonials</h2> <!-- Removed text-center class -->
       </div>
       <div class="row people">
-        <div v-for="testimonial in $store.state.testimonial" :key="testimonial.id" class="col-md-6 col-lg-4 item">
+        <div v-for="testimonial in $store.state.testimonial" :key="testimonial.id" class="col-md-6 col-lg-4 item text-center animate__animated animate__zoomInUp">
           <div class="box">
             <img class="rounded-circle testimonial-image" :src="testimonial.image">
             <hr class="my-4">
@@ -45,11 +45,12 @@ export default {
 
 .team-boxed {
   color: #313437;
-  background-image: url("https://i.ibb.co/t2z7CWk/testi.jpg" );
+  display: flex;
+  background-image: url("https://i.ibb.co/F51KWTx/test.jpg" );
   background-size: cover;
   background-position: center;
   padding: 20px;
-  height: 260vh;
+  height: 200vh;
   font-family: 'Merriweather', serif;
   /* padding: 20px 20px; */
 }
@@ -58,13 +59,14 @@ export default {
   font-weight: bold;
   margin-bottom: 40px;
   padding-top: 40px;
-  color: #fff;
+  color: #000;
 }
 
-.team-boxed .intro {
+.team-boxed .container .intro {
   font-size: 16px;
   max-width: 500px;
   margin: 0 auto;
+  color: #000;
 }
 
 /* .team-boxed .people {
@@ -123,5 +125,13 @@ export default {
 
 .team-boxed .social .social-link:hover {
   color: #555;
+}
+
+@media only screen and (max-width: 600px) {
+  .team-boxed {
+    background: #fff;
+    padding: 20px;
+  height: 520vh;
+  }
 }
 </style>
