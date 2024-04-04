@@ -131,7 +131,7 @@ export default {
   .team-boxed {
     background: #fff;
     padding: 20px;
-  height: 520vh;
+  height: 100%;
   }
 }
 </style>
