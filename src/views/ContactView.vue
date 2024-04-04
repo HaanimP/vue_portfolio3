@@ -7,10 +7,9 @@
             <p><i class="fa-solid fa-paper-plane"></i> haanimpietersen@gmail.com</p>
             <p><i class="fa-solid fa-phone"></i> 0714332419</p>
             <div class="social-icons">
-              <a href="https://www.facebook.com/profile.php?id=100089705331205"><i class="fa-brands fa-facebook animate__animated animate__bounce"></i></a>
-              <a href="https://twitter.com/nimmie_13"><i class="fa-brands fa-twitter-square animate__animated animate__bounce"></i></a>
-              <a href="https://instagram.com/the.one.and.only.haanim?igshid=MzMyNGUyNmU2YQ=="><i class="fa-brands fa-instagram animate__animated animate__bounce"></i></a>
-              <a href="https://za.linkedin.com/in/haanim-pietersen-172bb9264"><i class="fa-brands fa-linkedin animate__animated animate__bounce"></i></a>
+              <a href="https://vercel.com/haanims-projects" target="_blank"><i class="fa-solid fa-square-caret-up"></i></a>
+              <a href="https://github.com/HaanimP" target="_blank"><i class="fa-brands fa-github"></i></a>
+              <a href="https://za.linkedin.com/in/haanim-pietersen-172bb9264" target="_blank"><i class="fa-brands fa-linkedin animate__animated animate__bounce"></i></a>
             </div>
             <div class="map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52879.8279558335!2d18.519421550000008!3d-34.069789899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc415380a3a2d5%3A0xc223e448d2209d8d!2sPelikan%20Park%2C%20Cape%20Town%2C%207941!5e0!3m2!1sen!2sza!4v1705045428560!5m2!1sen!2sza" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -87,9 +86,13 @@
     
     <style scoped>
     #contact {
-      background-color: #664229;
-      padding: 50px 0;
-      color: #D2B48C;
+      background-image: url("https://i.ibb.co/Sd9Qkx1/conts.jpg" );
+      background-size: cover;
+    background-position: center;
+    padding: 20px;
+    height: 85vh;
+    font-family: "Merriweather", serif;
+      color: #fff;
     }
     
     .container {
@@ -100,10 +103,19 @@
     .row {
       display: flex;
       justify-content: space-between;
+      padding: 3rem;
     }
     
     .contact-left {
+      /* padding: 5rem; */
+      background: transparent;
+    backdrop-filter: blur(4px);
       width: 45%;
+      transition: transform 0.3s;
+    }
+
+    .contact-left:hover{
+      transform: scale(1.05);
     }
     
     .sub-title {
@@ -116,7 +128,7 @@
     }
     
     .social-icons a {
-      color: #D2B48C;
+      color: #fff;
       font-size: 24px;
       margin-right: 10px;
       display: inline-block;
@@ -141,7 +153,8 @@
   }
   
   .contact-form {
-    background-color: #987554;
+    background: transparent;
+    backdrop-filter: blur(4px);
     padding: 20px;
     border-radius: 8px;
   }
@@ -164,7 +177,8 @@
   
   
   .btn-submit {
-    background-color: #664229;
+    background: linear-gradient(to top, #c79081 0%, #dfa579 100%);
+    color: #fff;
   }
   
   .error-message {
