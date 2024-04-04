@@ -202,19 +202,33 @@
   }
   
   
-  @media (max-width: 768px) {
-      .row {
-        flex-direction: column; /* Change flex direction to column for stacking both contact sections */
-      }
-  
-      .contact-left,
-      .contact-right {
-        width: 100%; /* Make both contact sections take full width on smaller screens */
-      }
-  
-      .contact-right {
-        margin-top: 20px; /* Add some spacing between contact sections */
-      }
-    }
+  @media (max-width: 600px) {
+  #contact {
+    background-size: auto; /* Set background size to auto for smaller screens */
+  }
+
+  .row {
+    flex-direction: column; /* Change flex direction to column for stacking both contact sections */
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%; /* Make both contact sections take full width on smaller screens */
+  }
+
+  .contact-right {
+    margin-top: 20px; /* Add some spacing between contact sections */
+  }
+
+  #contact {
+   height: 150vh; /* Set background size to 200% of the viewport height for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 992px) {
+   #contact {
+    height: 60vh;
+   }
+}
   
   </style>
