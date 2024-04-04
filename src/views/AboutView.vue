@@ -44,7 +44,7 @@ export default {
   background-size: cover;
   background-position: center;
   padding: 20px;
-  height: 100vh;
+  height: 85vh;
 }
 
 .container1 {
