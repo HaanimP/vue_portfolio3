@@ -71,7 +71,7 @@
   }
 
   .pro {
-    color: #000;
+    color: #D2B48C;
     font-weight: 600;
   }
   
