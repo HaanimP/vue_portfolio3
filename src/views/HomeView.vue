@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="row" v-if="HomeArray && HomeArray.length > 0">
-      <div class="col-12 col-md-6">
+      <div class="col-4">
         <div class="webDeveloperTitle animate__animated animate__backInLeft">
           <h1>{{ HomeArray[0].title }}</h1>
         </div>
@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      <div class="col-12 col-md-6">
+      <div class="col-8">
         <div class="imageContainer animate__animated animate__backInRight">
           <div class="professionalImage">
             <img :src="HomeArray[0].imageSrc" alt="Professional Image">
@@ -61,12 +61,12 @@ export default {
   width: 100%;
 }
 
-.col-12 {
-  flex: 0 0 100%;
+.col-4 {
+  flex: 0 0 33.33%;
 }
 
-.col-md-6 {
-  flex: 0 0 50%;
+.col-8 {
+  flex: 0 0 66.66%;
 }
 
 .webDeveloperTitle {
@@ -132,74 +132,63 @@ export default {
 @media only screen and (max-width: 600px) {
   .row {
     flex-direction: column;
+    align-items: center;
   }
 
-  .col-12, .col-md-6 {
+  .col-4, .col-8 {
     flex: 1;
     width: 100%;
+    text-align: center;
   }
 
-  .greeting {
-    text-align: left;
-    margin-right: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+  .webDeveloperTitle, .greeting {
+    padding: 20px;
   }
 
-  .professionalImage, .additionalImage {
-    margin-top: 5%;
-  }
-
-  .greeting h1 {
-    color: #D2B48C;
-    font-weight: bolder;
+  .professionalImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
   }
 
   .additionalImage {
     display: none;
   }
 
-  .professionalImage img {
-    width: 100%; 
-    height: auto; 
-    border-radius: 5%; 
+  .contact-button {
+    margin-top: 20px;
   }
 }
 
+/* Media queries for medium screens */
 @media only screen and (max-width: 992px) {
   .row {
     flex-direction: column;
+    align-items: center;
   }
 
-  .col-12, .col-md-6 {
+  .col-4, .col-8 {
     flex: 1;
     width: 100%;
+    text-align: center;
   }
 
-  .greeting {
-    text-align: left;
-    margin-right: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+  .webDeveloperTitle, .greeting {
+    padding: 20px;
   }
 
-  .professionalImage, .additionalImage {
-    margin-top: 5%;
-  }
-
-  .greeting h1 {
-    color: #D2B48C;
-    font-weight: bolder;
+  .professionalImage img {
+    width: 70%; /* Adjust image width for better responsiveness */
+    height: auto;
+    border-radius: 5%;
   }
 
   .additionalImage {
     display: none;
   }
 
-  .professionalImage img {
-    width: 700px; 
-    height: 700px; 
-    border-radius: 5%; 
+  .contact-button {
+    margin-top: 20px;
   }
 }
 </style>
