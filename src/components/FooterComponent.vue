@@ -9,6 +9,7 @@
         <!-- Content Columns -->
         <div class="col-lg-5 col-md-6 order-lg-2 order-md-3 order-3">
           <h5 class="footer-title mb-4">Haanim Pietersen</h5>
+          <p class="footer-text mb-4">Talk is cheap, show me the code.</p>
           <p class="footer-text mb-0">All rights reserved to Haanim's Closet <i class="far fa-copyright"></i> {{ currentYear }}.</p>
           <div class="social-icons">
               <a href="https://vercel.com/haanims-projects" target="_blank"><i class="fa-solid fa-square-caret-up"></i></a>
@@ -79,7 +80,7 @@ export default {
   align-items: center;
   justify-content: center;
   list-style: none;
-  padding: 0;
+  padding-top: 1rem;
   margin: 0;
 }
 
