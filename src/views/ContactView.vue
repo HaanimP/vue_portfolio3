@@ -92,7 +92,7 @@
     padding: 20px;
     height: 85vh;
     font-family: "Merriweather", serif;
-      color: #fff;
+      color: #000;
     }
     
     .container {
@@ -128,7 +128,7 @@
     }
     
     .social-icons a {
-      color: #fff;
+      color: #000;
       font-size: 24px;
       margin-right: 10px;
       display: inline-block;

@@ -1,5 +1,6 @@
 <template>
     <div class="body">
+      <h2 class="pro">Projects</h2>
       <div class="container mt-5 mb-5">
         <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <div
@@ -67,6 +68,11 @@
   
   .card:hover {
     transform: scale(1.05);
+  }
+
+  .pro {
+    color: #000;
+    font-weight: 600;
   }
   
   .card-body {

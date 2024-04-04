@@ -2,7 +2,7 @@
   <div class="team-boxed">
     <div class="container">
       <div class="intro text-center"> <!-- Updated here -->
-        <h2>Testimonials</h2> <!-- Removed text-center class -->
+        <h2>Reviews</h2> <!-- Removed text-center class -->
       </div>
       <div class="row people">
         <div v-for="testimonial in $store.state.testimonial" :key="testimonial.id" class="col-md-6 col-lg-4 item text-center animate__animated animate__zoomInUp">
