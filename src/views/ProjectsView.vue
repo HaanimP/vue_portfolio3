@@ -56,7 +56,7 @@
     background-size: cover;
     background-position: center;
     padding: 20px;
-    height: 150vh;
+    height: 100%;
     font-family: "Merriweather", serif;
   }
   
