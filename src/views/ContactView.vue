@@ -90,7 +90,7 @@
       background-size: cover;
     background-position: center;
     padding: 20px;
-    height: 85vh;
+    height:100%;
     font-family: "Merriweather", serif;
       color: #000;
     }
