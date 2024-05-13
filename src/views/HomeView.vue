@@ -162,6 +162,9 @@ export default {
 
 /* Media queries for medium screens */
 @media only screen and (max-width: 992px) {
+.home {
+height: 100%;
+}
   .row {
     flex-direction: column;
     align-items: center;

@@ -50,7 +50,7 @@ export default {
   background-size: cover;
   background-position: center;
   padding: 20px;
-  height: 200vh;
+  height: 100%;
   font-family: 'Merriweather', serif;
   /* padding: 20px 20px; */
 }

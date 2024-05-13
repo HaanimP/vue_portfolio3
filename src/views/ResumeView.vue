@@ -63,6 +63,8 @@
         <p><i class="fa-brands fa-vuejs"></i><br>Vue JS</p>
         <p><i class="fa-brands fa-github"></i><br>Github</p>
         <p><i class="fa-brands fa-figma"></i><br>Figma</p>
+        <p><i class="fa-brands fa-linux"></i><br>Linux</p>
+        <p><i class="fa-brands fa-python"></i><br>Python</p>
       </div><br>
       <h3 class="t-skills">Soft Skills</h3>
       <div class="icons">
@@ -75,8 +77,9 @@
       </div><br>
 
       <div class="cvbtn animate__animated animate__slideInUp">
-        <a href="https://pdf.ac/1UuS9D" download class="btn" target="_blank">View My CV </a>
-      </div>
+  <a href="https://drive.google.com/file/d/1tdNmVWsIZ50C9NFg3Bh3OZ9ZQ2-Sygop/view?usp=drive_link" class="btn" target="_blank" download="Resume">Download CV</a>
+</div>
+
     </div>
   </template>
     
@@ -105,6 +108,7 @@
     /* background: linear-gradient(to top, #E6B980 0%, #EACDA3 100%); */
     background-image: url("https://i.ibb.co/cwLK998/res.jpg");
     font-family: 'Merriweather', serif;
+    height: 100%;
   }
   
   .edu {
@@ -205,19 +209,34 @@
   .card-text {
     color: #6c757d;
   }
+
+  .cvbtn {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100px; /* Keep the specified height */
+  width: 100%; /* Full width to ensure centering takes full effect */
+}
   
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    color: #D2B48C;
-    background-color: #987554;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10%;
-  }
-  
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #987554; /* Neutral brown shade */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #D2B48C; /* Lighter shade for hover effect */
+  color: #000;
+}
+
   .card-sl {
     background: transparent;
     backdrop-filter: blur(4px);
@@ -274,8 +293,52 @@
       height: auto !important; /* Adjust height to fit content */
     }
 
+    .icons {
+      gap: 10px; /* Adjust the gap value as needed */
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+
     .skills {
-      margin-top: 50px; /* Add margin to separate skills section from work experience card */
+      margin-top: auto  !important;;
+    }
+
+    .cvbtn {
+    margin-top: 20px; /* Adds top margin on mobile if needed */
+  }
+  }
+
+
+     
+
+    @media only screen and (max-width: 992px) {
+  .card-sl {
+    flex-direction: column; /* Ensures vertical stacking */
+    align-items: center; /* Centers content horizontally */
+    width: 700px; /* Takes full width of its container */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  }
+
+  .card-sl .row {
+    flex-direction: column; /* Changes row direction to column */
+  }
+
+  .card-sl .col-md-4, .card-sl .col-md-8 {
+    width: 100%; /* Full width to accommodate single-column layout */
+  }
+
+  .card-img-top {
+    width: 100%; /* Full width of its new container */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    margin-bottom: 20px; /* Adds space between the image and text content */
+  }
+
+  .card-body {
+    text-align: center; /* Center-aligns the text */
+  }
+
+  .skills {
+      margin-top: 90%;
     }
 
     .icons {
@@ -283,27 +346,10 @@
       margin-left: 6px;
       margin-right: 6px;
     }
+
+    .cvbtn {
+    margin-top: 20px; /* Adds top margin on mobile if needed */
   }
-
-
-      @media only screen and (max-width: 992px) {
-    /* Your existing media query styles */
-
-    .card-sl {
-      width: 700px; /* Make the work experience card full width on smaller screens */
-      height: 400px;
-    }
-
-    .card-img-top {
-      border-radius: 8px; /* Adjust border radius for smaller screens */
-      width:235px;
-      height: 400px; /* Adjust image height for smaller screens */
-    }
-
-    .icons {
-      gap: 10px; /* Adjust the gap value as needed */
-      margin-left: 6px;
-      margin-right: 6px;
-    }
-  }
+}
+  
   </style>

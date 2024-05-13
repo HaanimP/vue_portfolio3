@@ -106,11 +106,13 @@ export default {
 
   .container1 {
     width: 40%;
+    height: 100%;
     margin-bottom: 0;
   }
 
   .container2 {
     width: 60%;
+    height: 100%;
   }
 }
 
