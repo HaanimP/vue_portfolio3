@@ -3,7 +3,7 @@
     <div class="container1 animate__animated animate__slideInLeft">
       <img src="https://i.postimg.cc/pL8zc0vV/IMG-20231225-100757.png" alt="Professional Image">
       <h3>Haanim Pietersen</h3>
-      <p>Aspiring Full Stack Web Developer</p>
+      <p>Full Stack Web Developer</p>
       <p><strong>Date of birth:</strong><br> 13/08/2004</p>
       <p><strong>Languages:</strong><br>English, Afrikaans</p>
       <p><strong>Address:</strong><br>Pelican Park, Cape Town</p>
