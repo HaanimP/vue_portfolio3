@@ -65,6 +65,7 @@
         <p><i class="fa-brands fa-figma"></i><br>Figma</p>
         <p><i class="fa-brands fa-linux"></i><br>Linux</p>
         <p><i class="fa-brands fa-python"></i><br>Python</p>
+        <p><i class="fa-solid fa-c"></i><br>C++</p>
       </div><br>
       <h3 class="t-skills">Soft Skills</h3>
       <div class="icons">
@@ -77,7 +78,7 @@
       </div><br>
 
       <div class="cvbtn animate__animated animate__slideInUp">
-  <a href="https://drive.google.com/file/d/1tdNmVWsIZ50C9NFg3Bh3OZ9ZQ2-Sygop/view?usp=drive_link" class="btn" target="_blank" download="Resume">Download CV</a>
+  <a href="https://drive.google.com/file/d/13l3bGxoF0i4mmt4XhrAwybvC_NGeNDsZ/view?usp=drive_link" class="btn" target="_blank" download="Resume">View my CV</a>
 </div>
 
     </div>
